@@ -1,4 +1,4 @@
 #This is 404 Errror page to show
 
 
-ErrorDocument 404 http://localhost/finalpj/examiner/404%20err.php
+ErrorDocument 404 http://localhost/Final-project/examiner/404%20err.php

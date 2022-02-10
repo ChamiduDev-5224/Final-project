@@ -1,5 +1,5 @@
 
-<?php require_once 'C:\wamp64\www\finalpj\connection.php'; ?>
+<?php require_once 'C:\wamp64\www\Final-project\connection.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +29,7 @@
                                 } else {
                                    
 
-                                    header("location:http://localhost/finalpj/examiner/404%20err.php");
+                                    header("location:http://localhost/Final-project/examiner/404%20err.php");
 
                                 }
 

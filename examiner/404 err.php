@@ -1,4 +1,4 @@
-<?php require_once 'C:\wamp64\www\finalpj\connection.php'; ?>
+<?php require_once 'C:\wamp64\www\Final-project\connection.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +35,7 @@
                         <div class="error mx-auto" data-text="404">404</div>
                         <p class="lead text-gray-800 mb-5">Page Not Found</p>
                         <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
-                        <a href="http://localhost/finalpj/">&larr; Back to Home</a>
+                        <a href="http://localhost/Final-project/">&larr; Back to Home</a>
                     </div>
 
                 </div>

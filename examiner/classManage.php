@@ -1,4 +1,4 @@
-<?php require_once 'C:\wamp64\www\finalpj\connection.php'; ?>
+<?php require_once 'C:\wamp64\www\Final-project\connection.php'; ?>
 
 <?php 
   if(isset($_POST['Btclass'])){
@@ -26,7 +26,7 @@ else {
 
  ?>
 
- <!-- deleting class sd -->
+ <!-- deleting class -->
 
  <?php 
 
@@ -48,16 +48,7 @@ else {
   
 
   ?>
-
-  <?php
-
-   if (isset($_POST['viewbtn'])){
-
-    $view_data = "SELECT * FROM WHERE ff";
-
-   } ?> 
  
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -243,7 +234,13 @@ unset($_SESSION['status']);
         </button>
       </div>
       <div class="modal-body">
-      
+                                       
+      <?php 
+
+                                      
+      ?>
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
