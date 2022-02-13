@@ -75,7 +75,7 @@
                                      $rw = mysqli_num_rows($q44_run); 
                                     echo '<h1>'.$rw .' </h1>';
                                 }else {
-                                  echo 'errorrr';
+                                  
                                 }?></div> 
                                         </div>
                                         <div class="col-auto">
@@ -94,7 +94,25 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 TOTAL CLASSES</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+
+                                            <?php
+                               if (isset($_SESSION['ex_id']))  
+                                         {
+
+                                     $CARDClass=($_SESSION['ex_id']);
+
+                                     $q55 = "SELECT class_id FROM class WHERE class_ex_id=" . $CARDClass;
+
+                                     $q55_run = mysqli_query($connection , $q55);
+
+                                     $rwd = mysqli_num_rows($q55_run); 
+                                    echo '<h1>'.$rwd .' </h1>';
+                                }else {
+                                  
+                                }?>
+
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-users fa-2x text-gray-300"></i>

@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Manage Students</title>
+    <title>Exams</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,11 +34,11 @@
   <?php include 'sidenav.php';?>
 
    <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Students Details</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Exam Details</h6>
                         </div>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable" style="margin-left: 50px; margin-bottom: 5px;">
-  Add Students 
+  Assign Exam
 </button>
      
 
@@ -47,13 +47,13 @@
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Add Student</h5>
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Assign Exam</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form action="managestudents.php" method="POST" >
+        <form action="exam.php.php" method="POST" >
            <div class="form-group row">
 
             <input type="hidden" name="d_id">

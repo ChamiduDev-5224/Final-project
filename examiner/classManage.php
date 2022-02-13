@@ -187,6 +187,7 @@ unset($_SESSION['status']);
                                     
                                       <?php 
                                       if (mysqli_num_rows($q7_run)>0) {
+                                       
                                          while ($row1 =mysqli_fetch_assoc($q7_run)) {
                                           ?>
                                            
@@ -223,6 +224,10 @@ unset($_SESSION['status']);
            
 
 
+          
+
+
+
 <!-- View Modal -->
 <div class="modal fade" id="viewModalID" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -234,23 +239,73 @@ unset($_SESSION['status']);
         </button>
       </div>
       <div class="modal-body">
-                                       
-      <?php 
+     
+      <form action="classManage.php" method="POST">                           
+            
+      <div class="table-responsive">
+     
+ <!-- view each class students in modal view -->
+      <?php
+          
+                               
 
+                                     $q7 = "SELECT class.class_id , fff.std_details FROM fff INNER JOIN class ON fff.class_idd= class.class_id ";
+                             
+                                     $q7_run = mysqli_query($connection , $q7); 
+
+                                
+                                  ?>
+ <table class="table table-bordered" id="dataTable11" width="100%" cellspacing="0">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Student details</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tfoot>
+                                        <tr>
+                                        <th>Student details</th>
+            
+                                        </tr>
+                                    </tfoot>
+
+                                    <tbody>
+
+                                    <?php 
+                                      if (mysqli_num_rows($q7_run)>0) {
+                                         while ($row12 =mysqli_fetch_assoc($q7_run)) {
+                                          ?>
+                                     
+                                      <tr>
+                                          <td> <?php echo $row12['std_details']; ?></td>
+                                        
+                                      </tr>
+
+                                      <?php 
+                                             }
+                                       } else{
+
+                                        echo $q7_run;
+                                       }
+                                             ?>
                                       
-      ?>
+                                  </tbody>
+                              </table>
+                                         </div>                                   
 
-
+ <!-- view each class students in modal view -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
   <!-- End View Modal -->
 
+  
     <!-- Edit Modal -->
     <div class="modal fade" id="EditModalID" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -278,8 +333,9 @@ unset($_SESSION['status']);
                                      $forignID=($_SESSION['ex_id']);
 
             $dd_class = "SELECT stu_id , stu_name FROM student WHERE stu_examiner_id =" . $forignID;
-                $dd_class_run = mysqli_query($connection,$dd_class);
-                  
+                $dd_class_run = mysqli_query($connection,$dd_class); 
+                
+                
                   if(mysqli_num_rows($dd_class_run)>0){
                     foreach ($dd_class_run as $stlist ) {
                       ?>
