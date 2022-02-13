@@ -59,7 +59,7 @@
             <input type="hidden" name="d_id">
     <label for="inputExamTitle" class="col-sm-2 col-form-label">Exam Title</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputExamTitle" placeholder="Name" name="inputExamTitle">
+      <input type="text" class="form-control" id="inputExamTitle" placeholder="Title" name="inputExamTitle">
     </div>
   </div>
   <div class="form-group row">
@@ -139,20 +139,29 @@ unset($_SESSION['status']);
                                 <table class="table table-bordered" id="dataTable11" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Gender</th>
-                                            <th>Email</th>
-                                            <th><center>Delete</center></th>
-                                        </tr>
+                                            <th>Exam Title</th>
+                                            <th>Date and Time</th>
+                                            <th>Duration</th>
+                                            <th>Total Questions</th>
+                                            <th>Right Answer Mark</th>
+                                            <th>Wrong Answer Mark</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+
+                                          </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Gender</th>
-                                            <th>Email</th>
-                                            <th><center>Delete</center></th>
+
+                                            <th>Exam Title</th>
+                                            <th>Date and Time</th>
+                                            <th>Duration</th>
+                                            <th>Total Questions</th>
+                                            <th>Right Answer Mark</th>
+                                            <th>Wrong Answer Mark</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+
                                         </tr>
                                     </tfoot>
                                     <tbody>
