@@ -53,13 +53,13 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="exam.php.php" method="POST" >
+        <form action="exam.php" method="POST" >
            <div class="form-group row">
 
             <input type="hidden" name="d_id">
-    <label for="inputstname" class="col-sm-2 col-form-label">Name</label>
+    <label for="inputExamTitle" class="col-sm-2 col-form-label">Exam Title</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputstname" placeholder="Name" name="inputstname">
+      <input type="text" class="form-control" id="inputExamTitle" placeholder="Name" name="inputExamTitle">
     </div>
   </div>
   <div class="form-group row">
