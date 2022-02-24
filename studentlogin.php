@@ -1,3 +1,42 @@
+
+<?php require_once('connection.php'); ?>
+<?php 
+
+    if(isset($_POST['submit'])){
+
+        $ST_email="";
+        $ST_pwd="";
+
+  $ST_email = mysqli_real_escape_string($connection,$_POST['inSTDemail']);
+    $ST_pwd = mysqli_real_escape_string($connection,$_POST['inSTDpwd']);
+
+        $ST_pwd_hashed = sha1($ST_pwd);
+
+   $qr12 = "SELECT * FROM student WHERE stu_email='{$ST_email}' AND stu_pwd = '{$ST_pwd_hashed}' LIMIT 1";
+
+    $srT = mysqli_query($connection , $qr12);
+    if($srT){
+        if(mysqli_num_rows($srT)==1){
+          header("location:examiner/studentDashboard.php");
+          $stdsName = mysqli_fetch_assoc($srT);
+          $_SESSION['STD_name']= $stdsName['stu_name'];
+          $_SESSION['STD_id']= $stdsName['stu_id'];
+
+            
+       }
+        else
+        {
+            echo'<div class="alert alert-warning" role="alert">
+  Warning. Login Failed.<a href="studentlogin.php" class="alert-link"> Try again</a>. 
+    </div>';
+
+        }
+    } 
+}   
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,13 +69,13 @@
       <img src="assets/Online EXAM SYSTEM.png" class="rounded mx-auto d-block" alt="..." id="back-img">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="inSTDemail" required>
        </div>
       <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-   <input type="password" class="form-control" id="exampleInputPassword1">
+   <input type="password" class="form-control" id="exampleInputPassword1" name="inSTDpwd">
  </div>
-    <button type="submit" class="btn btn-success btn-lg btn-block" id="stlogbt">Login</button> 
+    <button type="submit" class="btn btn-success btn-lg btn-block" id="stlogbt" name="submit">Login</button> 
 </div>   
     <div>       
      </div>
@@ -86,7 +125,5 @@ label{
 }
 
 	</style>
-
-	
-	
 </html>
+<?php $connection -> close();?>

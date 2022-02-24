@@ -132,7 +132,26 @@
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">2</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+
+                                                    <?php
+                               if (isset($_SESSION['ex_id']))  
+                                         {
+
+                                     $CardExam=($_SESSION['ex_id']);
+
+                                     $q56 = "SELECT exam_id FROM exam WHERE examiner_exam_id=" . $CardExam;
+
+                                     $q56_run = mysqli_query($connection , $q56);
+
+                                     $rwdM = mysqli_num_rows($q56_run); 
+                                    echo '<h1>'.$rwdM .' </h1>';
+                                }else {
+                                  
+                                }?>
+
+
+                                                    </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-2">

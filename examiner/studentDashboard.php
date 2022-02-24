@@ -23,7 +23,7 @@
 </head>
 
 <body id="page-top">
-    <?php include 'sidenav.php'?>
+    <?php include 'stuSideNav.php'?>
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 

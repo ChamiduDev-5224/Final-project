@@ -304,8 +304,11 @@ unset($_SESSION['status']);
   </div>
 </div>
   <!-- End View Modal -->
-
+  <form action="exam.php" method="POST">    
+  <?php 
+$class_tt=$row1['class_sub'] ;
   
+  ?>
     <!-- Edit Modal -->
     <div class="modal fade" id="EditModalID" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -403,32 +406,12 @@ $_SESSION['status'] = ". Already Existing data.";
  } ?> 
 
 
-          <div class="form-group mt-3">
-            <button name="save_stt" class=" btn btn-primary"> Assign Students</button>
-          </div>
-        </form>
-
-          
-
-
-  </div>
+     
 </div>
-
-
-
-          <h5 style="color:black;">Delete Students</h5>
-        <div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </a>
-</div>
-
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary" name="save_stt">Save changes</button>
       </div>
     </div>
   </div>

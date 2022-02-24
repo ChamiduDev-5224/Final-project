@@ -24,6 +24,7 @@ $GLOBALS['stdemail'];
 // email and forign key duplication checking
 
               $dup = mysqli_query($connection,"SELECT * FROM student WHERE stu_email= '$stdemail' AND stu_examiner_id='$forignID' ");
+         
 if (mysqli_num_rows($dup)>0) {
   // if it is duplication print here
 $_SESSION['status'] = $stdemail.". Already Existing data.";
@@ -39,7 +40,7 @@ if(mysqli_query($connection,$q3)){
 $to       = $stdemail;                 
 $subject  = $stdname.' Your registerd in Online examination system.'; 
 $message  = 'Your Registration successfully done.
-             your Registered E-mail.  '. $stdemail  .'  Your password is. ' .$genPwd;
+             your Registered E-mail.  '. $stdemail  .'  Your student password is <NEED TO KEEP REMEMBER THIS !!> . ' .$sufflePWD;
 $headers  = 'From: [your_gmail_account_username]@gmail.com' . "\r\n" .
             'Content-type: text/html; charset=utf-8';
 if(mail($to, $subject, $message, $headers))

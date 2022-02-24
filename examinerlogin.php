@@ -6,7 +6,7 @@
         $e_email="";
         $e_pwd="";
 
-  $e_email = mysqli_real_escape_string($connection,$_POST['email']);
+    $e_email = mysqli_real_escape_string($connection,$_POST['email']);
     $e_pwd = mysqli_real_escape_string($connection,$_POST['password']);
 
         $e_pwd_hashed = sha1($e_pwd);
@@ -25,7 +25,7 @@
 
             header("location:examiner/dashboad.php");
                $fo=($_SESSION['ex_fname']);
-                                              $GG= NOW();
+                                   $GG= NOW();
 
                     $uptime = "UPDATE examiner SET examiner_log=.'$GG' WHERE examiner_id=.'$fo' "; 
 
@@ -141,3 +141,9 @@ label{
 	</style>
 </html>
 <?php $connection -> close(); ?>
+
+
+
+
+
+

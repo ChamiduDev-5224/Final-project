@@ -17,7 +17,7 @@ $fname = mysqli_real_escape_string($connection,$_POST['infname']);
 
 if($pwd!=$cpwd){
 
-			$errormsg[]="Password comfirmation failed.";
+			$errormsg[]="Password confirmation failed.";
 		}
 
 if(isset($errormsg) && !empty($errormsg)) {
@@ -60,7 +60,7 @@ else
 } else {
 	//email checking 
 
-	$errormsg[]="email exisited.";
+	$errormsg[]="email existed.";
 
 		echo'<div class="alert alert-warning" role="alert">
   <strong>Warning  </strong>.Email is already registered. <a href="examiner_register.php" class="alert-link">Try again</a>
