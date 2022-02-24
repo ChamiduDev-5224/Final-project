@@ -49,7 +49,7 @@
                                          <th>Exam Expire Date</th>
                                          <th>Duration</th>
                                          <th>Total Questions</th>
-                                         <th><center>Get</center></th>
+                                         <th><center>Scheme</center></th>
                                      </tr>
                                  </thead>
                                  <tfoot>
@@ -58,7 +58,7 @@
                                          <th>Exam Expire Date</th>
                                          <th>Duration</th>
                                          <th>Total Questions</th>
-                                         <th><center>Get</center></th>
+                                         <th><center>Scheme </center></th>
                                      </tr>
                                  </tfoot>
                                  <tbody>
@@ -73,7 +73,7 @@
                                          <td><?php echo $row1['exam_datetime'] ?></td>
                                          <td><?php echo $row1['exam_duration'] ?></td>
                                          <td><?php echo $row1['total_question'] ?></td>
-                                        <td> <form action="selection.php" method="POST"><center><input type="hidden" name="exam_id" value="<?php echo $row1['exam_id']; ?>"><button type="submit" class="btn btn-danger" data-dismiss="modal" name="">Done</center></button></form></td>  
+                                        <td> <form action="resultSheet.php" method="POST"><center><input type="hidden" name="exam_id" value="<?php echo $row1['exam_id']; ?>"><button type="submit" class="btn btn-danger" data-dismiss="modal" name="">open</center></button></form></td>  
                                          </tr>
 
                                          <?php 

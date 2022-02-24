@@ -314,7 +314,8 @@ unset($_SESSION['status']);
                                              }
                                        } else{
 
-                                        echo $query_select_exam;
+                                        echo 'No data';
+                                        
                                        }
                                              ?>
 

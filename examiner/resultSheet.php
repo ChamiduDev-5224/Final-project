@@ -1,9 +1,8 @@
+
 <?php require_once 'C:\wamp64\www\Final-project\connection.php'; ?>
 <?php require_once 'C:\wamp64\www\Final-project\examiner\selection.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -12,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Enroll Exams</title>
+    <title>Result Sheet</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,22 +19,24 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/animation.css" rel="stylesheet">
-    <!-- cdn  css-->
-    <link href=" https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
-   
+    
+ 
 
 </head>
 
 <body id="page-top">
 
-  <?php include 'stuSideNav.php';?>
+<?php include 'stuSideNav.php';?>
+ 
+<!--box shadow-->
+<div class="p-5 text-center bg-light shadow-lg p-3 mb-5 bg-white rounded" id="b-box"style="height:auto;">
 
-      <!-- DataTales Example -->
-                    
-      <div class="card shadow mb-4" style="padding:1px;">
+<h1>Result Sheet</h1>
+                  
+<div class="card shadow mb-4" style="padding:1px;">
                      
         
                      <div class="card-body">
@@ -47,10 +48,9 @@
                                                           
                                     
                                          <th><center>Question</center></th>
-                                         <th><center>Answer</center></th>
-                                         <th><center>Mark for Correct Answer</center></th>
-                                         <th><center>Mark for Wrong Answer</center></th>
-                                         <th><center>Action</center></th>
+                                         <th><center>Given Answer</center></th>
+                                         <th><center>Correct Answer</center></th>
+                                        
                                          
                                      </tr>
                                  </thead>
@@ -58,11 +58,10 @@
                                      <tr>
                                         
                                            
-                                         <th><center>Question</center></th>
-                                         <th><center>Select Answer</center></th>
-                                         <th><center>Mark for Correct Answer</center></th>
-                                         <th><center>Mark for Wrong Answer</center></th>
-                                         <th><center>Action</center></th>
+                                        <th><center>Question</center></th>
+                                         <th><center>Given Answer</center></th>
+                                         <th><center>Correct Answer</center></th>
+                                        
                                      </tr>
                                  </tfoot>
                                  <tbody>
@@ -81,18 +80,7 @@
                                      <tr>
                                          <td> <?php echo $row1['question_title'] ;?></td>
                                      
-                                         <td>              <div class="form-group">
-                                
-                                <select class="form-control" name="tq" required="">
-                                <option value="">Select Answer</option>
-                                  <option value="<?php echo $row1['opt_one']; ?>"><?php echo $row1['opt_one']; ?></option>
-                                  <option value="<?php echo $row1['opt_two']; ?>"><?php echo $row1['opt_two']; ?></option>
-                                  <option value="<?php echo $row1['opt_three']; ?>"><?php echo $row1['opt_three']; ?></option>
-                                  <option value="<?php echo $row1['opt_four']; ?>"><?php echo $row1['opt_four']; ?></option>
-                             
-                                </select>
-                              
-                              </div> </td>
+                                         
                            
                            
                                      
@@ -108,11 +96,9 @@
    
 ?> </center></td>
        
-       <td> <center> <?php echo $row1['mark_w_ans']; ?> </center> </td>   
-
-       <td>  <form action="" method="POST"><center><a href="resultSheet.php?id=<?php echo $row1['question_id']; ?>" type="button" class="btn btn-success btn-sm" name="enter_val">Submit</a></center></form></td>                             
+       <td> <center> <?php echo $row1['cor_answer']; ?> </center> </td>                            
             
-       <?php 
+            <?php 
                                           }
                                     } else{
 
@@ -131,10 +117,10 @@
             </div>  
             
              <!-- /.container-fluid -->
-      </body>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    
+</body>
+ <!-- Bootstrap core JavaScript-->
+ <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -164,5 +150,4 @@
   });
 
   
-</script>
 </html>

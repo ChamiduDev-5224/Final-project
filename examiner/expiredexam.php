@@ -47,18 +47,18 @@
                                                           
                                          <th>Exam Title</th>
                                          <th>Exam Expire Date</th>
-                                         <th>Duration</th>
-                                         <th>Total Questions</th>
-                                         <th><center>Get</center></th>
+                                         <th><center>Duration</center></th>
+                                         <th><center>Total Questions</center></th>
+                                         <th><center>Marks </center></th>
                                      </tr>
                                  </thead>
                                  <tfoot>
                                      <tr>
                                          <th>Exam Title</th>
                                          <th>Exam Expire Date</th>
-                                         <th>Duration</th>
-                                         <th>Total Questions</th>
-                                         <th><center>Get</center></th>
+                                         <th><center>Duration</center></th>
+                                         <th><center>Total Questions</center></th>
+                                         <th><center>Marks </center></th>
                                      </tr>
                                  </tfoot>
                                  <tbody>
@@ -79,9 +79,9 @@
                                      <tr>
                                          <td> <?php echo $row1['exam_title'] ?></td>
                                          <td><?php echo $row1['exam_datetime'] ?></td>
-                                         <td><?php echo $row1['exam_duration'] ?></td>
-                                         <td><?php echo $row1['total_question'] ?></td>
-                                        <td> <form action="selection.php" method="POST"><center><input type="hidden" name="exam_id" value="<?php echo $row1['exam_id']; ?>"><button type="submit" class="btn btn-danger" data-dismiss="modal" name="">Done</center></button></form></td>  
+                                         <td><center><?php echo $row1['exam_duration'] ?></center></td>
+                                         <td><center><?php echo $row1['total_question'] ?></center></td>
+                                        <td><center> 0</center> </td>  
                                          </tr>
 
                                          <?php 

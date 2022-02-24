@@ -21,6 +21,9 @@
           $stdsName = mysqli_fetch_assoc($srT);
           $_SESSION['STD_name']= $stdsName['stu_name'];
           $_SESSION['STD_id']= $stdsName['stu_id'];
+          $_SESSION['STD_mail']= $stdsName['stu_email'];
+          $_SESSION['STD_pwd']= $stdsName['stu_pwd'];
+
 
             
        }

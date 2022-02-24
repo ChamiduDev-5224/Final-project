@@ -63,7 +63,7 @@ $up_exam = mysqli_query($connection,"UPDATE exam SET exam_title= '$upETitle' , e
     $_SESSION['success'] = ".  successfully.";
 
    }else {
-  $_SESSION['status'] = $q8 ."Registered isn't successfully.";
+  $_SESSION['status'] = "Registered isn't successfully.";
 } 
  }}
 
